@@ -2,7 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "delete-me": "apps/delete-me",
-    "delete-me-e2e": "apps/delete-me-e2e"
+    "reactapp": "apps/reactapp",
+    "reactapp-e2e": "apps/reactapp-e2e"
   }
 }

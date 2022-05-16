@@ -1,6 +1,6 @@
 {
   "$schema": "..\\..\\node_modules\\nx\\schemas\\project-schema.json",
-  "sourceRoot": "apps/delete-me/src",
+  "sourceRoot": "apps/reactapp/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,17 +9,14 @@
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
-        "outputPath": "dist/apps/delete-me",
-        "index": "apps/delete-me/src/index.html",
+        "outputPath": "dist/apps/reactapp",
+        "index": "apps/reactapp/src/index.html",
         "baseHref": "/",
-        "main": "apps/delete-me/src/main.tsx",
-        "polyfills": "apps/delete-me/src/polyfills.ts",
-        "tsConfig": "apps/delete-me/tsconfig.app.json",
-        "assets": [
-          "apps/delete-me/src/favicon.ico",
-          "apps/delete-me/src/assets"
-        ],
-        "styles": ["apps/delete-me/src/styles.css"],
+        "main": "apps/reactapp/src/main.tsx",
+        "polyfills": "apps/reactapp/src/polyfills.ts",
+        "tsConfig": "apps/reactapp/tsconfig.app.json",
+        "assets": ["apps/reactapp/src/favicon.ico", "apps/reactapp/src/assets"],
+        "styles": ["apps/reactapp/src/styles.css"],
         "scripts": [],
         "webpackConfig": "@nrwl/react/plugins/webpack"
       },
@@ -33,8 +30,8 @@
         "production": {
           "fileReplacements": [
             {
-              "replace": "apps/delete-me/src/environments/environment.ts",
-              "with": "apps/delete-me/src/environments/environment.prod.ts"
+              "replace": "apps/reactapp/src/environments/environment.ts",
+              "with": "apps/reactapp/src/environments/environment.prod.ts"
             }
           ],
           "optimization": true,
@@ -50,15 +47,15 @@
       "executor": "@nrwl/web:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "delete-me:build",
+        "buildTarget": "reactapp:build",
         "hmr": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "delete-me:build:development"
+          "buildTarget": "reactapp:build:development"
         },
         "production": {
-          "buildTarget": "delete-me:build:production",
+          "buildTarget": "reactapp:build:production",
           "hmr": false
         }
       }
@@ -67,14 +64,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/delete-me/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/reactapp/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/delete-me"],
+      "outputs": ["coverage/apps/reactapp"],
       "options": {
-        "jestConfig": "apps/delete-me/jest.config.ts",
+        "jestConfig": "apps/reactapp/jest.config.ts",
         "passWithNoTests": true
       }
     }
